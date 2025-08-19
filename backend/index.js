@@ -17,11 +17,11 @@ database.dbconnect();
 app.use(express.json());  //middleware setup
 app.use(cookieParser());  //middleware setup
 app.use(
-    cors({   //to entertain req from frontend
-        origin:"http://localhost:3000" ,
-        credential:true,     
+    cors({
+        origin: ["http://localhost:3000", "http://your-other-url.com"],
+        credentials: true,
     })
-)
+);
 app.use(
     fileUpload({
         useTempFiles:true,
