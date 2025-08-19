@@ -18,7 +18,7 @@ app.use(express.json());  //middleware setup
 app.use(cookieParser());  //middleware setup
 app.use(
     cors({
-        origin: ["http://localhost:3000", "http://your-other-url.com"],
+        origin: ["http://localhost:3000", "https://study-notion-rho-blush.vercel.app"],
         credentials: true,
     })
 );
