@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "http://13.126.40.184:4000/api/$1"
+      "destination": "https://studynotion.mindleaf.in/api/$1"
     }
   ]
 }
