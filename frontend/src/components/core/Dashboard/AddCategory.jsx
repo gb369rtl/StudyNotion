@@ -12,7 +12,7 @@ const AddCategory = () => {
         reset,
       } = useForm();
       const handleAddCategory = async (data) => {
-        console.log("add category Data - ", data)
+        // console.log("add category Data - ", data)
         try {
           await createCategory(data,token)
           reset();

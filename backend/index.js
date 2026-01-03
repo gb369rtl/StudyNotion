@@ -18,10 +18,7 @@ app.use(express.json());  //middleware setup
 app.use(cookieParser());  //middleware setup
 app.use(
   cors({
-    origin: [
-      "http://localhost:3001",
-      "https://9hrpkn8l-3001.inc1.devtunnels.ms"
-    ],
+    origin: "*",
     credentials: true,
   })
 );
