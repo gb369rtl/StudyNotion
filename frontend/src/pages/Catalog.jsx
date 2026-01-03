@@ -21,12 +21,12 @@ const Catalog = () => {
     useEffect(()=> {
         const getCategories = async() => {
             const res = await apiConnector("GET", categories.CATEGORIES_API);
-            console.log(res)
-            console.log(catalogName)
+            // console.log(res)
+            // console.log(catalogName)
             // console.log(res?.data?.data?.filter((ct) => ct.name.split(" ").join("-").toLowerCase() === catalogName.toLowerCase())[0])
             const category_id = 
             res?.data?.data?.filter((ct) => ct.name.split(" ").join("-").toLowerCase() === catalogName.toLowerCase())[0]._id;
-            console.log(category_id)
+            // console.log(category_id)
             setCategoryId(category_id);
         }
         getCategories();
@@ -36,7 +36,7 @@ const Catalog = () => {
         const getCategoryDetails = async() => {
             try{
                 const res = await getCatalogaPageData(categoryId);
-                console.log("PRinting res: ", res);
+                // console.log("PRinting res: ", res);
                 setCatalogPageData(res);
             }
             catch(error) {
@@ -58,7 +58,7 @@ const Catalog = () => {
         )
       }
       if (!loading && !catalogPageData.success) {
-        console.log(catalogPageData)
+        // console.log(catalogPageData)
         return <Error />
       }
     

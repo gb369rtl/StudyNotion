@@ -43,7 +43,7 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
         if(!orderResponse.data.success) {
             throw new Error(orderResponse.data.message);
         }
-        console.log("PRINTING orderResponse", orderResponse);
+        // console.log("PRINTING orderResponse", orderResponse);
         //options
         const options = {
             key: process.env.REACT_APP_RAZORPAY_KEY,
@@ -65,7 +65,7 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
         
             }
         }
-        console.log("options iss===>>>", options)
+        // console.log("options iss===>>>", options)
         //Open razorpay modal
         const paymentObject = new window.Razorpay(options);
         paymentObject.open();

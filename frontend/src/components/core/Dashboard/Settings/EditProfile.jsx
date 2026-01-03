@@ -13,7 +13,7 @@ export default function EditProfile() {
   const { token } = useSelector((state) => state.auth);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  console.log(user)
+  // console.log(user)
   const {
     register,
     handleSubmit,
@@ -21,7 +21,7 @@ export default function EditProfile() {
   } = useForm();
 
   const submitProfileForm = async (data) => {
-    console.log("Form Data - ", data)
+    // console.log("Form Data - ", data)
     try {
       dispatch(updateProfile(token, data));
     } catch (error) {

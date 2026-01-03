@@ -39,7 +39,7 @@ const VideoDetails = () => {
         const filteredVideoData = await filteredData?.[0]?.subSection.filter(
           (data) => data?._id === subSectionId
         ); //got the subsetion/video
-        console.log("filtered video data",filteredVideoData)
+        // console.log("filtered video data",filteredVideoData)
         setVideoData(filteredVideoData[0]);
         setPreviewSource(courseEntireData.thumbnail);
         setVideoEnded(false);
